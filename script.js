@@ -205,6 +205,6 @@ function startMiffyGame() {
         }
     }
 
-    gameLoop();
-          }
+        gameLoop();
+}
 
