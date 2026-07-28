@@ -12,6 +12,7 @@ function revealSurprise() {
   const randomIndex = Math.floor(Math.random() * surprises.length);
   document.getElementById("surprise-result").innerHTML = surprises[randomIndex] 
 }
+
 function startMiffyGame() {
     const container = document.getElementById('game-container');
     container.style.display = 'block';
