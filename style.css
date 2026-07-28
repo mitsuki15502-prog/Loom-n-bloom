@@ -1,0 +1,128 @@
+/* Pastel Background & Cute Fonts */
+body {
+  font-family: 'Comic Sans MS', 'Fredoka', cursive, sans-serif;
+  background-color: #fff0f5;
+  color: #5c527f;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(180deg, #ffd1dc 0%, #ffedf3 100%);
+  padding: 30px 15px;
+  border-bottom: 5px solid #ffffff;
+}
+
+header h1 {
+  color: #ff6b8b;
+  font-size: 2em;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px #ffffff;
+}
+
+header p {
+  color: #7b7bb2;
+  font-weight: bold;
+  margin: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+section {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 4px solid #fff2a8;
+  box-shadow: 0 8px 15px rgba(255, 182, 193, 0.3);
+}
+
+h2 {
+  color: #ff85a2;
+}
+
+.grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 15px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.card-pink {
+  background-color: #ffe4e8;
+  border: 3px dashed #ffb6c1;
+}
+
+.card-blue {
+  background-color: #e3f2fd;
+  border: 3px dashed #90caf9;
+}
+
+.card-yellow {
+  background-color: #fffde7;
+  border: 3px dashed #ffe082;
+}
+
+.icon {
+  font-size: 45px;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff6b8b;
+  font-size: 1.3em;
+  background: #ffffff;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 4px 12px;
+}
+
+button {
+  background: linear-gradient(135deg, #ffb6c1, #bae1ff);
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 5px 12px rgba(255, 182, 193, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #ff85a2, #90caf9);
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: bold;
+  color: #7b7bb2;
+  background-color: #fff0f5;
+  padding: 12px;
+  border-radius: 15px;
+  border: 2px solid #ffc0cb;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff5ba;
+  color: #ff758c;
+  font-weight: bold;
+}
