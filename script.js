@@ -10,7 +10,7 @@ const surprises = [
 
 function revealSurprise() {
   const randomIndex = Math.floor(Math.random() * surprises.length);
-  document.getElementById("surprise-result").innerHTML = surprises[randomIndex];
+  document.getElementById("surprise-result").innerHTML = surprises[randomIndex] 
 }
 function startMiffyGame() {
     const container = document.getElementById('game-container');
@@ -24,13 +24,11 @@ function startMiffyGame() {
     let score = 0;
     let gameOver = false;
 
-    // Tap to jump
     canvas.onclick = function() {
         if (miffy.grounded && !gameOver) {
             miffy.vy = miffy.jump;
             miffy.grounded = false;
         } else if (gameOver) {
-            // Restart game
             obstacle.x = 300;
             score = 0;
             gameOver = false;
@@ -38,16 +36,13 @@ function startMiffyGame() {
     };
 
     function gameLoop() {
-        // Clear screen
         ctx.fillStyle = '#fff0f5';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Ground line
         ctx.fillStyle = '#ffb3d1';
         ctx.fillRect(0, 160, canvas.width, 40);
 
         if (!gameOver) {
-            // Physics
             miffy.vy += miffy.gravity;
             miffy.y += miffy.vy;
 
@@ -57,15 +52,13 @@ function startMiffyGame() {
                 miffy.grounded = true;
             }
 
-            // Obstacle movement
             obstacle.x -= obstacle.speed;
             if (obstacle.x < -20) {
                 obstacle.x = 320;
                 score++;
-                obstacle.speed += 0.2; // Gets faster!
+                obstacle.speed += 0.2;
             }
 
-            // Collision check
             if (
                 miffy.x < obstacle.x + obstacle.w &&
                 miffy.x + miffy.size > obstacle.x &&
@@ -76,21 +69,17 @@ function startMiffyGame() {
             }
         }
 
-        // Draw Miffy (Kawaii Pixel Bunny)
         ctx.fillStyle = '#ffffff';
         ctx.fillRect(miffy.x, miffy.y, miffy.size, miffy.size);
-        // Ears
         ctx.fillRect(miffy.x + 3, miffy.y - 8, 4, 10);
         ctx.fillRect(miffy.x + 13, miffy.y - 8, 4, 10);
-        // Cute pink bow/face details
+        
         ctx.fillStyle = '#ff66b2';
-        ctx.fillRect(miffy.x + 8, miffy.y - 4, 4, 4); // bow center
+        ctx.fillRect(miffy.x + 8, miffy.y - 4, 4, 4);
 
-        // Draw Obstacle (Kawaii Flower/Block)
         ctx.fillStyle = '#ff4d94';
         ctx.fillRect(obstacle.x, obstacle.y, obstacle.w, obstacle.h);
 
-        // Draw Score
         ctx.fillStyle = '#cc0066';
         ctx.font = '12px sans-serif';
         ctx.fillText("Score: " + score, 10, 20);
@@ -107,4 +96,14 @@ function startMiffyGame() {
     }
 
     gameLoop();
+}
+
+function revealSurprise() {
+    const surprises = [
+        "🌸 Cute Pastel Sticker Sheet! 🌸",
+        "💖 Sparkly Heart Charm! 💖",
+        "🎀 Bonus Glow-in-the-Dark Loom Bands! 🎀"
+    ];
+    const randomSurprise = surprises[Math.floor(Math.random() * surprises.length)];
+    document.getElementById("surprise-result").innerText = randomSurprise;
 }
