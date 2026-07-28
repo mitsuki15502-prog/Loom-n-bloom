@@ -12,16 +12,6 @@ function revealSurprise() {
   const randomIndex = Math.floor(Math.random() * surprises.length);
   document.getElementById("surprise-result").innerHTML = surprises[randomIndex] 
 }
-const surprises = [
-    "🌸 Cute Pastel Sticker Sheet! 🌸",
-    "💖 Sparkly Heart Charm! 💖",
-    "🎀 Bonus Glow-in-the-Dark Loom Bands! 🎀"
-];
-
-function revealSurprise() {
-    const randomSurprise = surprises[Math.floor(Math.random() * surprises.length)];
-    document.getElementById("surprise-result").innerText = randomSurprise;
-}
 
 function startMiffyGame() {
     const container = document.getElementById('game-container');
